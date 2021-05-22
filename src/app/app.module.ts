@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { UserCreateEditComponent } from './user-create-edit/user-create-edit.component';
 import { ContactCreateEditComponent } from './contact-create-edit/contact-create-edit.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
+import { NavbarComponent } from './SharedComponent/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UserCreateEditComponent,
-    ContactCreateEditComponent
+    ContactCreateEditComponent,
+    UserListComponent,
+    ContactListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
