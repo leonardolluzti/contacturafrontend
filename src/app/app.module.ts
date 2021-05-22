@@ -9,6 +9,7 @@ import { ContactCreateEditComponent } from './contact-create-edit/contact-create
 import { UserListComponent } from './user-list/user-list.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { NavbarComponent } from './SharedComponent/navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NavbarComponent } from './SharedComponent/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
