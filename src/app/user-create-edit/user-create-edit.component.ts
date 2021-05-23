@@ -11,5 +11,8 @@ export class UserCreateEditComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  criaUsuario(): void {   
+   
+  }
+  
 }

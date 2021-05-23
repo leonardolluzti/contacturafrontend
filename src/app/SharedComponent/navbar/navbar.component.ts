@@ -10,6 +10,16 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.putEvents();
+  }
+
+  putEvents(){
+    const menuDesktop = document.getElementById('desktop-menu');
+    const menuMobile = document.getElementById('toogle-action');
+    
+    menuMobile.addEventListener('click', function(){
+      menuDesktop.classList.toggle('active');
+    });
   }
 
 }

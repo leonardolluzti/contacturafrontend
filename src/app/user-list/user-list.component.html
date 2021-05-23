@@ -1,1 +1,40 @@
-<p>user-list works!</p>
+<app-navbar></app-navbar>
+<section>
+    <div class="titulo">
+        <spam>
+            Usuários
+        </spam>
+    </div>
+</section>
+<section>
+    <div class="buttom_new_contact button_primary_customizes">
+        <button style="background-color: #007bff |important;" mat-raised-button color="primary">Novo Usuário</button>
+    </div>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Username</th>
+                    <th>Status</th>
+                    <th>Menu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Nome">Mark</td>
+                    <td data-label="Username">Mark</td>
+                    <td data-label="Status">Mark</td>
+                    <td data-label="Menu">
+                        <a mat-raised-button routerLink="/user_create_edit" class="editar">
+                            Editar
+                        </a>
+                        <a mat-raised-button routerLink="/user_delete" class="deletar">
+                            Deletar
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

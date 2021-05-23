@@ -11,5 +11,8 @@ export class ContactCreateEditComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  criaContato(): void {    
+    
+  }
+ 
 }

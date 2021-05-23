@@ -1,1 +1,27 @@
-<p>user-create-edit works!</p>
+<app-navbar></app-navbar>
+<section>
+    <mat-card>
+        <mat-card-title>Cadastrar Novo Usuário</mat-card-title>
+        <form>
+            <mat-form-field>
+                <input matInput placeholder="Nome" name="name" type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Username" name="username" type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Senha" name="senha" type="password">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Status</mat-label>
+                    <select matNativeControl required>                       
+                        <option value="user">Usuário</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+            </mat-form-field>
+        </form>
+        <button mat-raised-button (click)="criaUsuario()" color="primary">
+            Salvar Usuário
+        </button>
+    </mat-card>
+</section>
