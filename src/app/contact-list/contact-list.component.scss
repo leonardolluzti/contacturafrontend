@@ -1,25 +1,20 @@
 .titulo{
     display: flex;
     justify-content: center;
+    span{
+        font-weight: 400;
+        font-size: 30px;
+        padding: 40px;
+    }
 }
 
 .button_new_contact{
     float: right;
     padding-right: 16px;
+    margin-bottom: 15px;
 }
 
-.editar{
-    margin: 20px 15px 0px 0px;
-    color:#fff;
-    background-color: #030d66;
-}
-.deletar{
-    margin: 20px 15px 0px 0px;
-    color:#fff;
-    background-color: #000;
-}
-
-table{
+table {
     border: 1px solid #ccc;
     border-collapse: collapse;
     margin: 0;
@@ -27,26 +22,31 @@ table{
     table-layout: fixed;
     width: 100%;
 }
-table tr{
+
+table tr {
     background-color: #f8f8f8;
 }
+
 table th,
-table td{
+table td {
     padding: 0.625em;
     text-align: center;
 }
-table th{
+
+table th {
     font-size: 0.85em;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
-@media screen and (max-width: 600px) {
-    table {
+
+@media screen and (max-width: 865px) {
+    table{
         border: 0;
     }
-    table thead{
+
+    table thead {
         border: none;
-        clip:rect(0 0 0 0);
+        clip: rect(0 0 0 0);
         height: 1px;
         margin: -1px;
         overflow: hidden;
@@ -54,24 +54,28 @@ table th{
         position: absolute;
         width: 1px;
     }
+
     table tr{
-        border-bottom: 3px solid #ddd;
+        border-bottom: 2px solid #ddd;
         display: block;
         margin-bottom: 0.625em;
     }
-    table td{
+
+    table td {
         border-bottom: 1px solid #ddd;
         display: block;
-        margin-bottom: 0.8em;
+        font-size: 0.8em;
         text-align: right;
     }
-    table td::before{
+
+    table td::before {
         content: attr(data-label);
         float: left;
         font-weight: bold;
         text-transform: uppercase;
     }
-    table td:last-child{
+
+    table td:last-child {
         border-bottom: 0;
     }
 }

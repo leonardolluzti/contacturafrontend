@@ -1,37 +1,36 @@
 <app-navbar></app-navbar>
+
 <section>
     <div class="titulo">
-        <spam>
-            Contatos
-        </spam>
+        <span>Contatos</span>
     </div>
 </section>
+
 <section>
-    <div class="buttom_new_contact button_primary_customizes">
-        <button style="background-color: #007bff |important;" mat-raised-button color="primary">Novo Contato</button>
+    <div class="button_new_contact">
+        <button mat-raised-button color="primary" (click)="goToCreate()" ><mat-icon>add</mat-icon>Novo Contato</button>
     </div>
+</section>
+
+<section>
     <div>
-        <table border="1">
+        <table>
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Fone</th>
-                    <th>Menu</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Fone</th>
+                    <th scope="col">Menu</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td data-label="Nome">Mark</td>
-                    <td data-label="Email">Mark</td>
-                    <td data-label="Fone">Mark</td>
+                <tr *ngFor="let contact of contactList">
+                    <td data-label="Nome">{{contact.name}}</td>
+                    <td data-label="Email">{{contact.email}}</td>
+                    <td data-label="Fone">{{contact.phone}}</td>
                     <td data-label="Menu">
-                        <a mat-raised-button routerLink="/contact_create_edit" class="editar">
-                            Editar
-                        </a>
-                        <a mat-raised-button routerLink="/contact_delete" class="deletar">
-                            Deletar
-                        </a>
+                        <button mat-raised-button style="margin-right: 5px;" color="accent" (click)="editContact(contact)"><mat-icon>build</mat-icon>Editar</button>
+                        <button mat-raised-button color="warn" (click)="deleteContact(contact.id)"><mat-icon>restore_from_trash</mat-icon>Deletar</button>
                     </td>
                 </tr>
             </tbody>
