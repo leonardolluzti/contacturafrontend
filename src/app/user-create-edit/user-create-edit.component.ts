@@ -20,7 +20,7 @@ export class UserCreateEditComponent implements OnInit {
     status: new FormControl('', [Validators.required])
   });
 
-  constructor(private router: Router, public userService: userService) { }
+  constructor(private router: Router, public userService: UserService) { }
 
   ngOnInit(): void {
     this.userService.botaoEdit.subscribe( edit => {
@@ -69,7 +69,7 @@ export class UserCreateEditComponent implements OnInit {
   updateUser(){
     if (this.userForm.valid){
       this.user = this.userForm.value;
-      this.userService.updateuser(this.user).subscribe(
+      this.userService.updateUser(this.user).subscribe(
         data => {
           Swal.fire({
             title: 'Sucesso!',
