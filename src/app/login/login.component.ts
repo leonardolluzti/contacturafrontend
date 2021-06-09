@@ -1,8 +1,8 @@
-import { LoginService } from './../login.service';
 import { Authentication } from './../model';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } from 'constants';
+import Swal from 'sweetalert2';
+import { LoginService } from '../service/login/login.service';
 
 @Component({
   selector: 'app-login',
@@ -18,8 +18,13 @@ export class LoginComponent implements OnInit, OnDestroy {
   constructor(public loginService: LoginService) { }
 
   ngOnInit(): void {
+    document.querySelector('html').style.background = '#f64f59';
   }
-  ngOnDestroy(): void{}
+
+  ngOnDestroy(): void{
+    document.querySelector('html').style.background = 'none';
+  }
+
 
   login(){
     this.authentication = this.loginForm.value;

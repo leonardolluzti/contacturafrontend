@@ -13,14 +13,14 @@
                         <input matInput placeholder="Email" type="text" value="" formControlName="username">
                     </mat-form-field>
                     <mat-form-field>
-                        <input matInput placeholder="Senha" type="text" value="" formControlName="password">
+                        <input matInput placeholder="Senha" type="password" value="" formControlName="password">
                     </mat-form-field>
                 </div>
             </form>
         </mat-card-content>
         <mat-card-actions>
             <button mat-raised-button color="primary">Cadastre-se</button>
-            <button mat-raised-button color="primary">Login</button>
+            <button mat-raised-button color="primary" (click)="login()">Login</button>
         </mat-card-actions>
     </mat-card>
 </section>
