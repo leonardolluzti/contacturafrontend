@@ -2,26 +2,34 @@
 <section>
     <mat-card>
         <mat-card-title>Cadastrar Novo Usuário</mat-card-title>
-        <form>
-            <mat-form-field>
-                <input matInput placeholder="Nome" name="name" type="text">
+        <form  class="container" [formGroup]="userForm">
+            <div class="col-2">
+            <mat-form-field class="item">
+                <label for="nome">Nome:</label>
+                <input matInput placeholder="Nome" name="name" type="text" class="form-control" formControlName="name">
             </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Username" name="username" type="text">
+            <mat-form-field class="item">
+                <label for="username">Username:</label>
+                <input matInput placeholder="Username" name="username" type="email" class="form-control" formControlName="username">
             </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Senha" name="senha" type="password">
+            </div>
+            <mat-form-field class="item">
+                <label for="senha">Senha:</label>
+                <input matInput placeholder="Senha" name="senha" type="password" class="form-control" formControlName="senha">
             </mat-form-field>
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" class="item">
                 <mat-label>Status</mat-label>
-                    <select matNativeControl required>                       
+                    <select matNativeControl required name="status">                       
                         <option value="user">Usuário</option>
                         <option value="admin">Administrador</option>
                     </select>
             </mat-form-field>
-        </form>
-        <button mat-raised-button (click)="criaUsuario()" color="primary">
-            Salvar Usuário
-        </button>
+            <div style="margin-top: 10px;" [ngStyle]="{'display': user === null ? 'block' : 'none' }">
+                <button mat-raised-button color="primary" (click)="createUser()">Salvar Usuario</button>
+            </div>
+            <div style="margin-top: 10px;" [ngStyle]="{'display': user !== null ? 'block' : 'none' }">
+                <button mat-raised-button color="primary" (click)="updateUser()">Editar Usuario</button>
+            </div>
+        </form>        
     </mat-card>
 </section>

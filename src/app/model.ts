@@ -8,3 +8,10 @@ export interface Contact{
     email: string;
     phone: string;
 }
+export interface User{
+    id?: number;
+    name: string;
+    username: string;
+    password: string;
+    status: string;
+}

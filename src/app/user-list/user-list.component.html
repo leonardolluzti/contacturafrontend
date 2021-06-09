@@ -1,37 +1,38 @@
 <app-navbar></app-navbar>
+
 <section>
     <div class="titulo">
-        <spam>
-            Usuários
-        </spam>
+        <span>Usuarios</span>
     </div>
 </section>
+
 <section>
-    <div class="buttom_new_contact button_primary_customizes">
-        <button style="background-color: #007bff |important;" mat-raised-button color="primary">Novo Usuário</button>
+    <div class="button_new_user">
+        <button mat-raised-button color="primary" (click)="goToCreate()" ><mat-icon>add</mat-icon>Novo Usuario</button>
     </div>
+</section>
+
+<section>
     <div>
-        <table border="1">
+        <table>
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Username</th>
-                    <th>Status</th>
-                    <th>Menu</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Senha</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Menu</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td data-label="Nome">Mark</td>
-                    <td data-label="Username">Mark</td>
-                    <td data-label="Status">Mark</td>
+                <tr *ngFor="let user of userList">
+                    <td data-label="Nome">{{user.name}}</td>
+                    <td data-label="Username">{{user.username}}</td>
+                    <td data-label="Senha">{{user.senha}}</td>
+                    <td data-label="Status">{{user.status}}</td>
                     <td data-label="Menu">
-                        <a mat-raised-button routerLink="/user_create_edit" class="editar">
-                            Editar
-                        </a>
-                        <a mat-raised-button routerLink="/user_delete" class="deletar">
-                            Deletar
-                        </a>
+                        <button mat-raised-button style="margin-right: 5px;" color="accent" (click)="editUser(user)"><mat-icon>build</mat-icon>Editar</button>
+                        <button mat-raised-button color="warn" (click)="deleteUser(user.id)"><mat-icon>restore_from_trash</mat-icon>Deletar</button>
                     </td>
                 </tr>
             </tbody>
