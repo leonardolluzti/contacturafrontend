@@ -7,13 +7,13 @@
             </div>
         </mat-card-title>
         <mat-card-content>
-            <form>
+            <form [formGroup]="loginForm">
                 <div>
                     <mat-form-field>
-                        <input matInput placeholder="Username" type="text" value="">
+                        <input matInput placeholder="Email" type="text" value="" formControlName="username">
                     </mat-form-field>
                     <mat-form-field>
-                        <input matInput placeholder="Senha" type="text" value="">
+                        <input matInput placeholder="Senha" type="text" value="" formControlName="password">
                     </mat-form-field>
                 </div>
             </form>
