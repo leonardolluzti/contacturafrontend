@@ -2,8 +2,12 @@
     <mat-card>
         <mat-card-title>
             <div class="logo_grid">
-                <span class="logo"><img src="../../assets/img/Logotipo.png" width="80px"></span>
-                <span class="font-style">Contactura</span>
+                <span class="logo">
+                    <img src="../../assets/img/Logotipo.png" width="80px" alt="logo">
+                </span>
+                <span class="font-style">
+                    Contactura
+                </span>
             </div>
         </mat-card-title>
         <mat-card-content>
@@ -17,10 +21,9 @@
                     </mat-form-field>
                 </div>
             </form>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-raised-button color="primary">Cadastre-se</button>
-            <button mat-raised-button color="primary" (click)="login()">Login</button>
-        </mat-card-actions>
+        </mat-card-content> 
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="login()">Login</button>
+                </mat-card-actions>
     </mat-card>
 </section>
