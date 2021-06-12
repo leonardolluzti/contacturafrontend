@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   constructor(public loginService: LoginService) { }
 
   ngOnInit(): void {
-    document.querySelector('html').style.background = '#f64f59';
+    document.querySelector('html').style.background = 'blue';
   }
 
   ngOnDestroy(): void{
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       );
     }else{
       Swal.fire({
-        title: 'Oops!',
+        title: 'Erro!',
         text: 'Preencha todos os campos',
         icon: 'error',
         confirmButtonText: 'Okay'
